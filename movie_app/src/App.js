@@ -2,25 +2,28 @@ import React, { Component } from 'react';
 import './App.css';
 import Movie from './Movie';
 
-const movieName = [
-	'John Wick 3',
-	'Joker',
-	'Harry Potter',
-]
-
-const moviePoster = [
-    './johnwick3.jpg',
-    './joker.jpg',
-    './harrypotter.jpg'
+const movies = [
+    {
+        title: 'John Wick 3',
+        poster: './johnwick3.jpg'
+    },
+    {
+        title: 'Joker',
+        poster: './joker.jpg'
+    },
+    {
+        title: 'Harry Potter',
+        poster: './harrypotter.jpg'
+    }
 ]
 
 class App extends Component {
     render() {
         return (
             <div className="App">
-				<Movie title={movieName[0]} poster={moviePoster[0]}/>
-				<Movie title={movieName[1]} poster={moviePoster[1]}/>
-				<Movie title={movieName[2]} poster={moviePoster[2]}/>
+                {movies.map((movie, index) => {
+                    return <Movie title={movie.title} poster={movie.poster} key={index}/>
+                })}
     		</div>
         )
     }

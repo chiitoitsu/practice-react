@@ -16,3 +16,21 @@
 - props를 사용한다.
 - jsx 태그내에 이름={데이터}로 넘긴다.
 - this.props.이름으로 접근한다.
+
+# map
+
+- map을 통해 새로운 배열을 만들 수 있다.
+- MySQL의 view와 비슷하다 생각하면 될듯.
+- [map 참고](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/map)
+
+# key
+
+- 엘리먼트가 많을경우에는 key를 줘야한다.
+- 각 key는 고유해야 한다.
+
+# PropType
+
+- 출력하고자 하는 데이터가 다른 형식이 되지않도록 할 수 있다.
+- ex) PropType을 문자열로 지정했는데 숫자로 출력할경우 에러가 난다.
+- isRequired를 사용하여 필수로 제공되게 할 수 있다.
+- MySQL의 notnull이라 생각하면 될 듯 하다.
