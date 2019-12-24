@@ -39,3 +39,10 @@
 
 - 렌더 : componentWillMount() → render() → componentDidMount()
 - 업데이트 : componentWillReceiveProps() → shouldComponentUpdate() → componentWillUpdate() → render() → componentDidUpdate()
+
+# state
+
+- 리액트 컴포넌트안에 들어있는 오브젝트
+- state가 바뀔때마다 컴포넌트를 새롭게 렌더한다.
+- state변경시 setState를 사용하여야 한다.
+- ...this.state.이름을 사용해서 새롭게 데이터를 추가할 수 있다.
