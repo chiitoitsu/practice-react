@@ -34,3 +34,8 @@
 - ex) PropType을 문자열로 지정했는데 숫자로 출력할경우 에러가 난다.
 - isRequired를 사용하여 필수로 제공되게 할 수 있다.
 - MySQL의 notnull이라 생각하면 될 듯 하다.
+
+# 컴포넌트 라이프 사이클
+
+- 렌더 : componentWillMount() → render() → componentDidMount()
+- 업데이트 : componentWillReceiveProps() → shouldComponentUpdate() → componentWillUpdate() → render() → componentDidUpdate()
