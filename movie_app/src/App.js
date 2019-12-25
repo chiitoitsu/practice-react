@@ -5,27 +5,32 @@ import Movie from './Movie';
 class App extends Component {
 
     state = {
-        movies: [
-            {
-                title: 'John Wick 3',
-                poster: './johnwick3.jpg'
-            },
-            {
-                title: 'Joker',
-                poster: './joker.jpg'
-            },
-            {
-                title: 'Harry Potter',
-                poster: './harrypotter.jpg'
-            }
-        ]
+        
+    }
+
+    _renderMovies = () => {
+        const movies = this.state.movies.map((movie, index) => {
+            return <Movie title={movie.title} poster={movie.poster} key={index}/>
+        })
+        return movies
     }
 
     componentDidMount() {
         setTimeout(() => {
             this.setState({
                 movies: [
-                    ...this.state.movies,
+                    {
+                        title: 'John Wick 3',
+                        poster: './johnwick3.jpg'
+                    },
+                    {
+                        title: 'Joker',
+                        poster: './joker.jpg'
+                    },
+                    {
+                        title: 'Harry Potter',
+                        poster: './harrypotter.jpg'
+                    },
                     {
                         title: 'Ford v Ferrari',
                         poster: './ford_v_ferrari.jpg'
@@ -42,9 +47,7 @@ class App extends Component {
     render() {
         return (
             <div className="App">
-                {this.state.movies.map((movie, index) => {
-                    return <Movie title={movie.title} poster={movie.poster} key={index}/>
-                })}
+                {this.state.movies ? this._renderMovies() : 'Loading'}
     		</div>
         )
     }
