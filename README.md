@@ -46,3 +46,13 @@
 - state가 바뀔때마다 컴포넌트를 새롭게 렌더한다.
 - state변경시 setState를 사용하여야 한다.
 - ...this.state.이름을 사용해서 새롭게 데이터를 추가할 수 있다.
+
+# Smart Component
+
+- state와 prop 모두 있음
+- render, 라이프 사이클, return 존재
+
+# Dumb Component (Functional Component)
+
+- state가 없고 prop만 있음
+- render, 라이프 사이클이 없고 return만 있음
