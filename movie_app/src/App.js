@@ -9,42 +9,42 @@ class App extends Component {
 			
     }
 
+    componentDidMount() {
+        this._getMovies()
+    }
+
     _renderMovies = () => {
-        const movies = this.state.movies.map((movie, index) => {
-            return <Movie title={movie.title} poster={movie.poster} key={index}/>
+        const movies = this.state.movies.map(movie => {
+            return <Movie title={movie.title} poster={movie.large_cover_image} key={movie.id}/>
         })
         return movies
     }
 
     _renderMovies2 = () => {
-        const movies = this.state.movies.map((movie, index) => {
-            return <Movie2 title={movie.title} poster={movie.poster} key={index}/>
+        const movies = this.state.movies.map(movie => {
+            return <Movie2 title={movie.title} poster={movie.large_cover_image} key={movie.id}/>
         })
         return movies
     }
 
-    componentDidMount() {
-        fetch('https://yts.lt/api/v2/list_movies.json?sort_by=rating')
-		.then(response => response.json())
-		.then(json => console.log(json))
-		.catch(err => console.log(err))
+    _getMovies = async () => {
+        const movies = await this._callApi()
+        this.setState({
+            movies: movies
+        })
+    }
 
-	// fetch().then().catch()
-	/*
-        .catch(function (err) {
-            console.log(err)
-		})
-		.catch((err) => {
-			console.log(err)
-		})
-	*/
+    _callApi = () => {
+        return fetch('https://yts.lt/api/v2/list_movies.json?sort_by=rating')
+		.then(response => response.json())
+		.then(json => json.data.movies)
+		.catch(err => console.log(err))
     }
 
     render() {
         return (
             <div className="App">
                 {this.state.movies ? this._renderMovies() : 'Loading'}
-                {this.state.movies ? this._renderMovies2() : 'Loading'}
     		</div>
         )
     }
