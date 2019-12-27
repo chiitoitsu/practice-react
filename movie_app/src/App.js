@@ -6,7 +6,7 @@ import Movie2 from './Movie2';
 class App extends Component {
 
     state = {
-			
+
     }
 
     componentDidMount() {
@@ -15,14 +15,20 @@ class App extends Component {
 
     _renderMovies = () => {
         const movies = this.state.movies.map(movie => {
-            return <Movie title={movie.title} poster={movie.large_cover_image} key={movie.id}/>
+            return <Movie title={movie.title_english} poster={movie.medium_cover_image} key={movie.id}/>
         })
         return movies
     }
 
     _renderMovies2 = () => {
         const movies = this.state.movies.map(movie => {
-            return <Movie2 title={movie.title} poster={movie.large_cover_image} key={movie.id}/>
+            return <Movie2 
+                title={movie.title_english} 
+                poster={movie.medium_cover_image} 
+                key={movie.id} 
+                genres={movie.genres}
+                synopsis={movie.synopsis}
+            />
         })
         return movies
     }
@@ -44,7 +50,7 @@ class App extends Component {
     render() {
         return (
             <div className="App">
-                {this.state.movies ? this._renderMovies() : 'Loading'}
+                {this.state.movies ? this._renderMovies2() : 'Loading'}
     		</div>
         )
     }
