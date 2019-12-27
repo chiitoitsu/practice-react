@@ -6,7 +6,7 @@ import Movie2 from './Movie2';
 class App extends Component {
 
     state = {
-        
+			
     }
 
     _renderMovies = () => {
@@ -24,32 +24,20 @@ class App extends Component {
     }
 
     componentDidMount() {
-        setTimeout(() => {
-            this.setState({
-                movies: [
-                    {
-                        title: 'John Wick 3',
-                        poster: './johnwick3.jpg'
-                    },
-                    {
-                        title: 'Joker',
-                        poster: './joker.jpg'
-                    },
-                    {
-                        title: 'Harry Potter',
-                        poster: './harrypotter.jpg'
-                    },
-                    {
-                        title: 'Ford v Ferrari',
-                        poster: './ford_v_ferrari.jpg'
-                    },
-                    {
-                        title: 'Forrest Gump',
-                        poster: './forrest_gump.jpg'
-                    }
-                ]
-            })
-        }, 2000)
+        fetch('https://yts.lt/api/v2/list_movies.json?sort_by=rating')
+		.then(response => response.json())
+		.then(json => console.log(json))
+		.catch(err => console.log(err))
+
+	// fetch().then().catch()
+	/*
+        .catch(function (err) {
+            console.log(err)
+		})
+		.catch((err) => {
+			console.log(err)
+		})
+	*/
     }
 
     render() {
