@@ -1,22 +1,29 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import LinesEllipsis from 'react-lines-ellipsis';
 import './Movie.css';
 
 // Dumb Component
 function Movie2({title, poster, genres, synopsis}) {
     return (
         <div className='Movie'>
-            <div className='Movie_Columns'>
+            <div className='Movie_Column'>
                 <MoviePoster2 title={title} poster={poster}/>
             </div>
-            <div className='Movie_Columns'>
+            <div className='Movie_Column'>
                 <h1>{title}</h1>
                 <div className='Movie_Genres'>
                     {genres.map((genre, index) => <MovieGenre genre={genre} key={index} />)}
                 </div>
-                <p className='Movie_Synopsis'>
-                    {synopsis}
-                </p>
+                <div className='Movie_Synopsis'>
+                <LinesEllipsis
+                    text={synopsis}
+                    maxLine={3}
+                    ellipsis=' ...'
+                    trimRight
+                    basedOn='words'
+                />
+                </div>
             </div>
         </div>
     )
