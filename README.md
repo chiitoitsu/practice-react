@@ -1,3 +1,7 @@
+# 완성본
+
+- [보러가기](https://chiitoitsu.github.io/movie_app/)
+
 # 리액트의 특징
 
 - 자바스크립트 기반이기 때문에 다른 기술을 배울 필요가 없다.
