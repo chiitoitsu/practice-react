@@ -1,6 +1,10 @@
+# 참고한 강의
+
+- [React JS로 웹 서비스 만들기](https://www.inflearn.com/course/reactjs-web)
+
 # 완성본
 
-- [보러가기](https://chiitoitsu.github.io/movie_app/)
+- [영화앱](https://chiitoitsu.github.io/movie_app/)
 
 # 리액트의 특징
 
