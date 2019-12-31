@@ -4,8 +4,8 @@ import './Main.css';
 function Main({name, job}) {
     return (
         <div id='Main'>
-            <div>{name}</div>
-            <div>{job}</div>
+            <div id='Main_Name'>{name}</div>
+            <div id='Main_Job'>{job}</div>
         </div>
     )
 }

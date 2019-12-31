@@ -1,0 +1,17 @@
+#Main {
+    width: auto;
+    height: 1000px;
+    background-color: lightblue;
+    text-align: center;
+}
+
+#Main_Name {
+    padding-top: 300px;
+    font-size: 100px;
+    color: white;
+}
+
+#Main_Job {
+    font-size: 50px;
+    color: lightcyan;
+}
