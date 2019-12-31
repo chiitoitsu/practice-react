@@ -1,0 +1,13 @@
+#About_Title {
+    float: left;
+    padding: 100px;
+    font-size: 30px;
+}
+
+#About_Text {
+    padding: 100px;
+}
+
+#About_Text::after {
+    clear: both;
+}
