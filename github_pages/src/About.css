@@ -5,9 +5,7 @@
 }
 
 #About_Text {
+    
     padding: 100px;
 }
 
-#About_Text::after {
-    clear: both;
-}
