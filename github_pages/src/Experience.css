@@ -1,0 +1,35 @@
+.Exp_Title {
+    font-size: 30px;
+    text-align: center;
+}
+
+.Experience {
+    padding-left: 25%;
+    padding-right: 25%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.Exp_Term, .Exp_Icon, .Exp_Col {
+    float: left;
+}
+
+.Exp_Icon {
+    padding: 25px;
+    margin: 25px;
+    background-color: lightblue;
+    border-radius: 100px;
+}
+
+.Exp_Col {
+    width: 600px;
+    border: grey 1px solid;
+}
+
+.Exp_Name {
+    font-size: 25px;
+}
+
+.Exp_Job {
+    font-size: 20px;
+}
