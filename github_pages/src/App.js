@@ -39,15 +39,15 @@ class App extends Component {
 	}
 
 	_renderMenu = () => {
-		const menu = this.state.menu.map(menu_list => {
-			return <li>{menu_list}</li>
+		const menu = this.state.menu.map((menu_list, index) => {
+			return <li key={index}>{menu_list}</li>
 		})
 		return menu
 	}
 	
 	_renderExperience = () => {
-		const exps = this.state.exps.map(exp => {
-			return <Experience term={exp.term} name={exp.name} job={exp.job} text={exp.text}/>
+		const exps = this.state.exps.map((exp, index) => {
+			return <Experience term={exp.term} name={exp.name} job={exp.job} text={exp.text} key={index} />
 		})
 		return exps
 	}
@@ -55,7 +55,7 @@ class App extends Component {
 	render() {
 		return (
 			<div className='App'>
-				<Menu menu={this._renderMenu()}/>
+				<Menu menu={this._renderMenu()} />
 				<Main name='Lee SeungWon' job='Student' />
 				<About />
 				{this._renderExperience()}
