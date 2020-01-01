@@ -1,5 +1,6 @@
-# 참고한 강의
+# 참고한 강의 & 자료
 
+- [React 공식 레퍼런스](https://ko.reactjs.org/)
 - [React JS로 웹 서비스 만들기](https://www.inflearn.com/course/reactjs-web)
 
 # 완성본
