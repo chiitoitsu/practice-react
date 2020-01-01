@@ -8,6 +8,14 @@ import Experience from './Experience.js'
 class App extends Component {
 
 	state = {
+		menu: [
+			'About',
+            'Experience',
+            'Education',
+            'Projects',
+            'Skills',
+            'Contact'
+		],
 		exps: [
 			{
 				term: '2015.01.01. ~ 2016.01.01.',
@@ -30,6 +38,13 @@ class App extends Component {
 		]
 	}
 
+	_renderMenu = () => {
+		const menu = this.state.menu.map(menu_list => {
+			return <li>{menu_list}</li>
+		})
+		return menu
+	}
+	
 	_renderExperience = () => {
 		const exps = this.state.exps.map(exp => {
 			return <Experience term={exp.term} name={exp.name} job={exp.job} text={exp.text}/>
@@ -40,7 +55,7 @@ class App extends Component {
 	render() {
 		return (
 			<div className='App'>
-				<Menu />
+				<Menu menu={this._renderMenu()}/>
 				<Main name='Lee SeungWon' job='Student' />
 				<About />
 				{this._renderExperience()}

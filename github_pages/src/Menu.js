@@ -1,16 +1,11 @@
 import React from 'react';
 import './Menu.css';
 
-function Menu() {
+function Menu({menu}) {
     return (
-        <div id='Menu'>
+        <div className='Menu'>
             <ul className='Menu_List'>
-                <li>About</li>
-                <li>Experience</li>
-                <li>Education</li>
-                <li>Projects</li>
-                <li>Skills</li>
-                <li>Contact</li>
+                {menu}
             </ul>
         </div>
     )
