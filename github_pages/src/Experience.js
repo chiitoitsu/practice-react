@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import './Experience.css';
 
 function Experience({term, name, job, text}) {
@@ -14,6 +15,13 @@ function Experience({term, name, job, text}) {
             <div className='Clear'></div>
         </div>
     )
+}
+
+Experience.propTypes = {
+    term: PropTypes.string.isRequired,
+    name: PropTypes.string.isRequired,
+    job: PropTypes.string.isRequired,
+    text: PropTypes.string.isRequired
 }
 
 export default Experience;
