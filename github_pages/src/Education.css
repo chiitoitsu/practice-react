@@ -1,0 +1,16 @@
+.Education {
+    margin-left: 33%;
+    margin-right: 33%;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    width: 33%;
+    border: grey 1px solid;
+}
+
+.Edu_School {
+    font-size: 25px;
+}
+
+.Edu_Grade {
+    font-size: 20px;
+}
