@@ -1,0 +1,25 @@
+.Prj_Title {
+    font-size: 30px;
+    text-align: center;
+}
+
+.Project {
+    padding-left: 25%;
+    padding-right: 25%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    text-align: center;
+}
+
+.Prj_Img {
+    float: left;
+}
+
+.Prj_Name {
+    padding-top: 50px;
+    font-size: 25px;
+}
+
+.Prj_Text {
+    padding-top: 50px;
+}

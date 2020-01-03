@@ -5,6 +5,7 @@ import Main from './Main.js';
 import About from './About.js';
 import Experience from './Experience.js';
 import Education from './Education.js';
+import Project from './Project.js';
 
 class App extends Component {
 
@@ -50,6 +51,20 @@ class App extends Component {
 				term: '2017.01.01. ~ 2018.01.01.',
 				text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in iaculis ex. Etiam volutpat laoreet urna. Morbi ut tortor nec nulla commodo malesuada sit amet vel lacus.'
 			}
+		],
+		projects: [
+			{
+				img: './project.jpg',
+				name: 'Project Name',
+				text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in iaculis ex. Etiam volutpat laoreet urna. Morbi ut tortor nec nulla commodo malesuada sit amet vel lacus.',
+				url: 'https://github.com/chiitoitsu'
+			},
+			{
+				img: './project.jpg',
+				name: 'Project Name',
+				text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in iaculis ex. Etiam volutpat laoreet urna. Morbi ut tortor nec nulla commodo malesuada sit amet vel lacus.',
+				url: 'https://github.com/chiitoitsu'
+			}
 		]
 	}
 
@@ -74,14 +89,25 @@ class App extends Component {
 		return edus
 	}
 
+	_renderProject = () => {
+		const projects = this.state.projects.map((project, index) => {
+			return <Project img={project.img} name={project.name} text={project.text} url={project.url} key={index}/>
+		})
+		return projects
+	}
+
 	render() {
 		return (
 			<div className='App'>
 				<Menu menu={this._renderMenu()} />
 				<Main name='Lee SeungWon' job='Student' />
 				<About />
+				<div className='Exp_Title'>Experience</div>
 				{this._renderExperience()}
+				<div className='Edu_Title'>Education</div>
 				{this._renderEducation()}
+				<div className='Prj_Title'>Projects</div>
+				{this._renderProject()}
 			</div>
 		)
 	}
