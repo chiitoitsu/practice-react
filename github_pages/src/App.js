@@ -6,6 +6,7 @@ import About from './About.js';
 import Experience from './Experience.js';
 import Education from './Education.js';
 import Project from './Project.js';
+import Skill from './Skill.js'
 
 class App extends Component {
 
@@ -65,6 +66,13 @@ class App extends Component {
 				text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in iaculis ex. Etiam volutpat laoreet urna. Morbi ut tortor nec nulla commodo malesuada sit amet vel lacus.',
 				url: 'https://github.com/chiitoitsu'
 			}
+		],
+		skills: [
+			'JavaScript', 'Python', 'Ruby',
+			'Go', 'Node.js', 'AngularJs',
+			'React', 'Elixir', 'Java',
+			'C', 'C#', 'C++',
+			'Ruby on Rails'
 		]
 	}
 
@@ -96,6 +104,13 @@ class App extends Component {
 		return projects
 	}
 
+	_renderSkill = () => {
+		const skills = this.state.skills.map((skill, index) => {
+			return <li key={index}>{skill}</li>
+		})
+		return skills
+	}
+
 	render() {
 		return (
 			<div className='App'>
@@ -108,6 +123,8 @@ class App extends Component {
 				{this._renderEducation()}
 				<div className='Prj_Title'>Projects</div>
 				{this._renderProject()}
+				<div className='Skill_Title'>Skills</div>
+				<Skill skills= {this._renderSkill()} />
 			</div>
 		)
 	}
