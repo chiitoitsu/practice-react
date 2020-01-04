@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import * as Scroll from 'react-scroll';
+import { Link, Element , Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
 import './App.css';
 import Menu from './Menu.js';
 import Main from './Main.js';
@@ -12,12 +14,30 @@ class App extends Component {
 
 	state = {
 		menu: [
-			'About',
-            'Experience',
-            'Education',
-            'Projects',
-            'Skills',
-            'Contact'
+			{
+				id: 'About_Title',
+				text: 'About'
+			},
+			{
+				id: 'Exp_Title',
+				text: 'Experience'
+			},
+			{
+				id: 'Edu_Title',
+				text: 'Education'
+			},
+			{
+				id: 'Prj_Title',
+				text: 'Projects'
+			},
+			{
+				id: 'Skill_Title',
+				text: 'Skills'
+			},
+			{
+				id: 'Contact_Title',
+				text : 'Contact'
+			}            
 		],
 		exps: [
 			{
@@ -78,7 +98,12 @@ class App extends Component {
 
 	_renderMenu = () => {
 		const menu = this.state.menu.map((menu_list, index) => {
-			return <li key={index}>{menu_list}</li>
+			return <li key={index} 
+				onClick={() => scroller.scrollTo(menu_list.id, {
+					duration: 1000, smooth: true
+				})}>
+				{menu_list.text}
+			</li>
 		})
 		return menu
 	}
@@ -115,16 +140,17 @@ class App extends Component {
 		return (
 			<div className='App'>
 				<Menu menu={this._renderMenu()} />
-				<Main name='Lee SeungWon' job='Student' />
-				<About />
-				<div className='Exp_Title'>Experience</div>
+				<Main id='Main_Title' name='Lee SeungWon' job='Student' />
+				<About id='About_Title' />
+				<div id='Exp_Title'>Experience</div>
 				{this._renderExperience()}
-				<div className='Edu_Title'>Education</div>
+				<div id='Edu_Title'>Education</div>
 				{this._renderEducation()}
-				<div className='Prj_Title'>Projects</div>
+				<div id='Prj_Title'>Projects</div>
 				{this._renderProject()}
-				<div className='Skill_Title'>Skills</div>
+				<div id='Skill_Title'>Skills</div>
 				<Skill skills= {this._renderSkill()} />
+				<div id='Contact_Title'></div>
 			</div>
 		)
 	}
