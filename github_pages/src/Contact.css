@@ -1,0 +1,31 @@
+#Contact_Title {
+    font-size: 30px;
+    text-align: center;
+}
+
+#Contact {
+    margin-left: 33%;
+    margin-right: 33%;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    width: 33%;
+}
+
+#Contact_Email, #Contact_Message {
+    display: block;
+}
+
+#Contact_Email {
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+#Contact_Message {
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+#Contact_Button {
+    width: 100%;
+    height: 30px;
+}

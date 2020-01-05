@@ -9,6 +9,7 @@ import Experience from './Experience.js';
 import Education from './Education.js';
 import Project from './Project.js';
 import Skill from './Skill.js'
+import Contact from './Contact.js'
 
 class App extends Component {
 
@@ -150,7 +151,8 @@ class App extends Component {
 				{this._renderProject()}
 				<div id='Skill_Title'>Skills</div>
 				<Skill skills= {this._renderSkill()} />
-				<div id='Contact_Title'></div>
+				<div id='Contact_Title'>Get in Touch</div>
+				<Contact />
 			</div>
 		)
 	}
