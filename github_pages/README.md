@@ -9,5 +9,5 @@
 
 # 사용한 패키지
 
-- [react-scroll](https://www.npmjs.com/package/react-scroll)
+- ~~[react-scroll](https://www.npmjs.com/package/react-scroll)~~ react-springy-parallax로 대체
 - [react-springy-parallax](https://www.npmjs.com/package/react-springy-parallax)

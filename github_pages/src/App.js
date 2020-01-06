@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import * as Scroll from 'react-scroll';
-import { Link, Element , Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
+import Parallax from 'react-springy-parallax'
 import './App.css';
 import Menu from './Menu.js';
 import Main from './Main.js';
@@ -15,30 +14,12 @@ class App extends Component {
 
 	state = {
 		menu: [
-			{
-				id: 'About_Title',
-				text: 'About'
-			},
-			{
-				id: 'Exp_Title',
-				text: 'Experience'
-			},
-			{
-				id: 'Edu_Title',
-				text: 'Education'
-			},
-			{
-				id: 'Prj_Title',
-				text: 'Projects'
-			},
-			{
-				id: 'Skill_Title',
-				text: 'Skills'
-			},
-			{
-				id: 'Contact_Title',
-				text : 'Contact'
-			}            
+			'About',
+			'Experience',
+			'Education',
+			'Projects',
+			'Skills',
+			'Contact'       
 		],
 		exps: [
 			{
@@ -99,12 +80,11 @@ class App extends Component {
 
 	_renderMenu = () => {
 		const menu = this.state.menu.map((menu_list, index) => {
-			return <li key={index} 
-				onClick={() => scroller.scrollTo(menu_list.id, {
-					duration: 1000, smooth: true
-				})}>
-				{menu_list.text}
-			</li>
+			return (
+				<li key={index} onClick={() => this.parallax.scrollTo(index + 1)}>
+					{menu_list}
+				</li>
+			)
 		})
 		return menu
 	}
@@ -140,19 +120,35 @@ class App extends Component {
 	render() {
 		return (
 			<div className='App'>
-				<Menu menu={this._renderMenu()} />
-				<Main id='Main_Title' name='Lee SeungWon' job='Student' />
-				<About id='About_Title' />
-				<div id='Exp_Title'>Experience</div>
-				{this._renderExperience()}
-				<div id='Edu_Title'>Education</div>
-				{this._renderEducation()}
-				<div id='Prj_Title'>Projects</div>
-				{this._renderProject()}
-				<div id='Skill_Title'>Skills</div>
-				<Skill skills= {this._renderSkill()} />
-				<div id='Contact_Title'>Get in Touch</div>
-				<Contact />
+				<Parallax ref={ref => this.parallax = ref} pages={7}>
+					<Parallax.Layer offset={0} speed={0.5}>
+						<Menu menu={this._renderMenu()} />
+						<Main id='Main_Title' name='Lee SeungWon' job='Student' />
+    				</Parallax.Layer>
+					<Parallax.Layer offset={1} speed={0.5}>
+						<About id='About_Title' />
+					</Parallax.Layer>
+					<Parallax.Layer offset={2} speed={0.5}>
+						<div id='Exp_Title'>Experience</div>
+						{this._renderExperience()}
+					</Parallax.Layer>
+					<Parallax.Layer offset={3} speed={0.5}>
+						<div id='Edu_Title'>Education</div>
+						{this._renderEducation()}
+					</Parallax.Layer>
+					<Parallax.Layer offset={4} speed={0.5}>
+						<div id='Prj_Title'>Projects</div>
+						{this._renderProject()}
+					</Parallax.Layer>
+					<Parallax.Layer offset={5} speed={0.5}>
+						<div id='Skill_Title'>Skills</div>
+						<Skill skills= {this._renderSkill()} />
+					</Parallax.Layer>
+					<Parallax.Layer offset={6} speed={0.5}>
+						<div id='Contact_Title'>Get in Touch</div>
+						<Contact />
+					</Parallax.Layer>
+				</Parallax>
 			</div>
 		)
 	}
