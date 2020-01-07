@@ -4,17 +4,16 @@
 }
 
 .Experience {
+    display: flex;
     padding-left: 25%;
     padding-right: 25%;
     padding-top: 50px;
     padding-bottom: 50px;
 }
 
-.Exp_Term, .Exp_Icon, .Exp_Col {
-    float: left;
-}
-
 .Exp_Icon {
+    width: 10px;
+    height: 10px;
     padding: 25px;
     margin: 25px;
     background-color: lightblue;

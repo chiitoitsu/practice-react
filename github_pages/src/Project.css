@@ -4,15 +4,12 @@
 }
 
 .Project {
+    display: flex;
     padding-left: 25%;
     padding-right: 25%;
     padding-top: 50px;
     padding-bottom: 50px;
     text-align: center;
-}
-
-.Prj_Img {
-    float: left;
 }
 
 .Prj_Name {

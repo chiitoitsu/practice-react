@@ -9,7 +9,6 @@ function Education({school, grade, term, text}) {
             <div className='Edu_Grade'>{grade}</div>
             <div className='Edu_Term'>{term}</div>
             <div className='Edu_Text'>{text}</div>
-            <div className='Clear'></div>
         </div>
     )
 }

@@ -12,7 +12,6 @@ function About() {
                 Morbi ut tortor nec nulla commodo malesuada sit amet vel lacus. 
                 Fusce eget efficitur libero. 
             </div>
-            <div className='Clear'></div>
         </div>
     )
 }

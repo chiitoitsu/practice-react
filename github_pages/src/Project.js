@@ -8,12 +8,13 @@ function Project ({img, name, text, url}) {
             <div className='Prj_Img'>
                 <img src={img} alt={name + '_img'}/>
             </div>
-            <div className='Prj_Name'>{name}</div>
-            <div className='Prj_Text'>{text}</div>
-            <div className='Prj_Url'>
-                <a href={url}>View Project</a>
+            <div className='Prj_Box'>
+                <div className='Prj_Name'>{name}</div>
+                <div className='Prj_Text'>{text}</div>
+                <div className='Prj_Url'>
+                    <a href={url}>View Project</a>
+                </div>
             </div>
-            <div className='Clear'></div>
         </div>
     )
 }

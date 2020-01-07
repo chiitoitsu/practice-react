@@ -121,31 +121,30 @@ class App extends Component {
 		return (
 			<div className='App'>
 				<Parallax ref={ref => this.parallax = ref} pages={7}>
-					<Parallax.Layer offset={0} speed={0.5}>
+					<Parallax.Layer offset={0} speed={0}>
 						<Menu menu={this._renderMenu()} />
 						<Main id='Main_Title' name='Lee SeungWon' job='Student' />
     				</Parallax.Layer>
-					<Parallax.Layer offset={1} speed={0.5}>
+					<Parallax.Layer offset={1} speed={0}>
 						<About id='About_Title' />
 					</Parallax.Layer>
-					<Parallax.Layer offset={2} speed={0.5}>
+					<Parallax.Layer offset={2} speed={0}>
 						<div id='Exp_Title'>Experience</div>
 						{this._renderExperience()}
 					</Parallax.Layer>
-					<Parallax.Layer offset={3} speed={0.5}>
+					<Parallax.Layer offset={3} speed={0}>
 						<div id='Edu_Title'>Education</div>
 						{this._renderEducation()}
 					</Parallax.Layer>
-					<Parallax.Layer offset={4} speed={0.5}>
+					<Parallax.Layer offset={4} speed={0}>
 						<div id='Prj_Title'>Projects</div>
 						{this._renderProject()}
 					</Parallax.Layer>
-					<Parallax.Layer offset={5} speed={0.5}>
+					<Parallax.Layer offset={5} speed={0}>
 						<div id='Skill_Title'>Skills</div>
 						<Skill skills= {this._renderSkill()} />
 					</Parallax.Layer>
-					<Parallax.Layer offset={6} speed={0.5}>
-						<div id='Contact_Title'>Get in Touch</div>
+					<Parallax.Layer offset={6} speed={0}>
 						<Contact />
 					</Parallax.Layer>
 				</Parallax>

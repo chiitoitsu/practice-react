@@ -6,7 +6,7 @@ function Experience({term, name, job, text}) {
     return (
         <div className='Experience'>
             <div className='Exp_Term'>{term}</div>
-            <div className='Exp_Icon'></div>
+            <img className='Exp_Icon' src='./marker.svg' alt='marker' />
             <div className='Exp_Col'>
                 <div className='Exp_Name'>{name}</div>
                 <div className='Exp_Job'>{job}</div>
