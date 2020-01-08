@@ -13,6 +13,7 @@ import Contact from './Contact.js'
 class App extends Component {
 
 	state = {
+		speed: 0.5,
 		menu: [
 			'About',
 			'Experience',
@@ -120,31 +121,41 @@ class App extends Component {
 	render() {
 		return (
 			<div className='App'>
-				<Parallax ref={ref => this.parallax = ref} pages={7}>
-					<Parallax.Layer offset={0} speed={0}>
+				<Parallax ref={ref => this.parallax = ref} pages={7} style={{backgroundImage: 'url(./background.png)' }}>
+					<Parallax.Layer offset={0} speed={1} style={{backgroundImage: 'url(./title.jpg)' }}/>
+
+					<Parallax.Layer offset={0} speed={this.state.speed}>
 						<Menu menu={this._renderMenu()} />
 						<Main id='Main_Title' name='Lee SeungWon' job='Student' />
     				</Parallax.Layer>
-					<Parallax.Layer offset={1} speed={0}>
+					<Parallax.Layer offset={1} speed={this.state.speed}>
 						<About id='About_Title' />
 					</Parallax.Layer>
-					<Parallax.Layer offset={2} speed={0}>
-						<div id='Exp_Title'>Experience</div>
-						{this._renderExperience()}
+					<Parallax.Layer offset={2} speed={this.state.speed}>
+						<div className='myContainer'>
+							<div id='Exp_Title'>Experience</div>
+							{this._renderExperience()}
+						</div>
 					</Parallax.Layer>
-					<Parallax.Layer offset={3} speed={0}>
+					<Parallax.Layer offset={3} speed={this.state.speed}>
+					<div className='myContainer'>
 						<div id='Edu_Title'>Education</div>
 						{this._renderEducation()}
+					</div>
 					</Parallax.Layer>
-					<Parallax.Layer offset={4} speed={0}>
+					<Parallax.Layer offset={4} speed={this.state.speed}>
+					<div className='myContainer'>
 						<div id='Prj_Title'>Projects</div>
 						{this._renderProject()}
+					</div>
 					</Parallax.Layer>
-					<Parallax.Layer offset={5} speed={0}>
+					<Parallax.Layer offset={5} speed={this.state.speed}>
+					<div className='myContainer'>
 						<div id='Skill_Title'>Skills</div>
 						<Skill skills= {this._renderSkill()} />
+					</div>
 					</Parallax.Layer>
-					<Parallax.Layer offset={6} speed={0}>
+					<Parallax.Layer offset={6} speed={this.state.speed}>
 						<Contact />
 					</Parallax.Layer>
 				</Parallax>
