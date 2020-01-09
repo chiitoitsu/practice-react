@@ -8,3 +8,23 @@
     min-width: 100%;
     min-height: 100%;
 }
+
+#top {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    padding: 10px;
+    width: 50px;
+    height: 50px;
+    right: 2%;
+    bottom: 2%;
+    text-align: center;
+    color: white;
+    background-color: grey;
+    border-radius: 100%;
+}
+
+#top:hover {
+    cursor: pointer;
+    background-color: black;
+}
