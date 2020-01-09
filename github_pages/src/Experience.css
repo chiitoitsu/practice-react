@@ -22,7 +22,9 @@
 
 .Exp_Col {
     width: 600px;
-    border: grey 1px solid;
+    padding: 15px;
+    background-color: white;
+    box-shadow: 5px 5px 15px grey;
 }
 
 .Exp_Name {

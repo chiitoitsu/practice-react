@@ -12,7 +12,6 @@ function Experience({term, name, job, text}) {
                 <div className='Exp_Job'>{job}</div>
                 <div className='Exp_Text'>{text}</div>
             </div>
-            <div className='Clear'></div>
         </div>
     )
 }

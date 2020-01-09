@@ -9,7 +9,9 @@
     margin-top: 50px;
     margin-bottom: 50px;
     width: 33%;
-    border: grey 1px solid;
+    padding: 15px;
+    background-color: white;
+    box-shadow: 5px 5px 15px grey;
 }
 
 .Edu_School {
