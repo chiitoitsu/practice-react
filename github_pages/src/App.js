@@ -121,10 +121,9 @@ class App extends Component {
 	render() {
 		return (
 			<div className='App'>
+				<div id='top' onClick={() => this.parallax.scrollTo(0)}>Go to top</div>
 				<Parallax ref={ref => this.parallax = ref} pages={7} style={{backgroundImage: 'url(./background.png)' }}>
 					<Parallax.Layer offset={0} speed={1} style={{backgroundImage: 'url(./title.jpg)' }}/>
-					<Parallax.Layer offset={0} speed={-1} ><div id='top' onClick={() => this.parallax.scrollTo(0)}>Go to top</div></Parallax.Layer>
-					
 					<Parallax.Layer offset={0} speed={this.state.speed}>
 						<Menu menu={this._renderMenu()} />
 						<Main id='Main_Title' name='Lee SeungWon' job='Student' />
@@ -159,9 +158,7 @@ class App extends Component {
 					<Parallax.Layer offset={6} speed={this.state.speed}>
 						<Contact />
 					</Parallax.Layer>
-					
 				</Parallax>
-				
 			</div>
 		)
 	}
