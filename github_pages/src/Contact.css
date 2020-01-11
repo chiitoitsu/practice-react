@@ -19,17 +19,18 @@
 }
 
 #Contact_Email {
-    margin-top: 50px;
+    margin-top: 25px;
     width: 30%;
 }
 
 #Contact_Message {
-    margin-top: 50px;
+    resize: none;
+    margin-top: 25px;
     width: 30%;
 }
 
 #Contact_Button {
-    margin-top: 50px;
+    margin-top: 25px;
     width: 30%;
     height: 30px;
 }
