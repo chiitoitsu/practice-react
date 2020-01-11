@@ -8,6 +8,8 @@
 - [React에서 인풋 필드 validate 하기](https://leejungdo.com/blog/2019/01/26/React%EC%97%90%EC%84%9C-%EC%9D%B8%ED%92%8B-%ED%95%84%EB%93%9C-validate%ED%95%98%EA%B8%B0.html)
 - [background-size](https://www.codingfactory.net/10559)
 - [w3schools](https://www.w3schools.com/)
+- [크롬의 textarea 크기조절 안되게 막기](https://kdarkdev.tistory.com/197)
+- [HTML에서 메일 보내기](https://frontcode.tistory.com/33)
 
 # 사용한 패키지
 
