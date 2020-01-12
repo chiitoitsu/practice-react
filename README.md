@@ -6,6 +6,7 @@
 # 완성본
 
 - [영화앱](https://chiitoitsu.github.io/movie_app/)
+- [포트폴리오](https://chiitoitsu.github.io/portfolio/)
 
 # 리액트의 특징
 
