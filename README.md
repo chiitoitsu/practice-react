@@ -2,6 +2,7 @@
 
 - [React 공식 레퍼런스](https://ko.reactjs.org/)
 - [React JS로 웹 서비스 만들기](https://www.inflearn.com/course/reactjs-web)
+- [React & Express 를 이용한 웹 어플리케이션 개발하기](https://www.inflearn.com/course/react-%EA%B0%95%EC%A2%8C-velopert)
 
 # 완성본
 
